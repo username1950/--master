@@ -8,7 +8,7 @@ namespace Семеновых_Латыпов
 {
     static class Program
     {
-        public static CafeEntities2 cafedb = new CafeEntities2();
+        public static CafeEntities3 cafedb = new CafeEntities3();
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>

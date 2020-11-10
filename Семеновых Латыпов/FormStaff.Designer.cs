@@ -40,8 +40,8 @@
             this.comboBoxAccept = new System.Windows.Forms.ComboBox();
             this.labelNumber = new System.Windows.Forms.Label();
             this.labelDate = new System.Windows.Forms.Label();
-            this.textBoxPhone = new System.Windows.Forms.TextBox();
-            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.textBoxNumber = new System.Windows.Forms.TextBox();
+            this.textBoxDate = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +54,7 @@
             this.buttonDel.TabIndex = 48;
             this.buttonDel.Text = "Удалить ";
             this.buttonDel.UseVisualStyleBackColor = true;
+            this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
             // 
             // buttonEdit
             // 
@@ -63,6 +64,7 @@
             this.buttonEdit.TabIndex = 47;
             this.buttonEdit.Text = "Изменить";
             this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // buttonAdd
             // 
@@ -72,6 +74,7 @@
             this.buttonAdd.TabIndex = 46;
             this.buttonAdd.Text = "Создать ";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // listViewTables
             // 
@@ -84,7 +87,7 @@
             this.listViewTables.GridLines = true;
             this.listViewTables.HideSelection = false;
             this.listViewTables.Location = new System.Drawing.Point(327, 30);
-            this.listViewTables.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listViewTables.Margin = new System.Windows.Forms.Padding(2);
             this.listViewTables.MultiSelect = false;
             this.listViewTables.Name = "listViewTables";
             this.listViewTables.Size = new System.Drawing.Size(482, 397);
@@ -116,9 +119,10 @@
             // 
             this.comboBoxAccept.FormattingEnabled = true;
             this.comboBoxAccept.Items.AddRange(new object[] {
-            "ЗАНЯТО"});
+            "ЗАНЯТО",
+            "СВОБОДНО"});
             this.comboBoxAccept.Location = new System.Drawing.Point(21, 369);
-            this.comboBoxAccept.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxAccept.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxAccept.Name = "comboBoxAccept";
             this.comboBoxAccept.Size = new System.Drawing.Size(120, 21);
             this.comboBoxAccept.TabIndex = 54;
@@ -143,27 +147,27 @@
             this.labelDate.TabIndex = 51;
             this.labelDate.Text = "Дата";
             // 
-            // textBoxPhone
+            // textBoxNumber
             // 
-            this.textBoxPhone.Location = new System.Drawing.Point(21, 317);
-            this.textBoxPhone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBoxPhone.Name = "textBoxPhone";
-            this.textBoxPhone.Size = new System.Drawing.Size(258, 20);
-            this.textBoxPhone.TabIndex = 50;
+            this.textBoxNumber.Location = new System.Drawing.Point(21, 317);
+            this.textBoxNumber.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxNumber.Name = "textBoxNumber";
+            this.textBoxNumber.Size = new System.Drawing.Size(258, 20);
+            this.textBoxNumber.TabIndex = 50;
             // 
-            // textBoxName
+            // textBoxDate
             // 
-            this.textBoxName.Location = new System.Drawing.Point(21, 245);
-            this.textBoxName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(258, 20);
-            this.textBoxName.TabIndex = 49;
+            this.textBoxDate.Location = new System.Drawing.Point(21, 245);
+            this.textBoxDate.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxDate.Name = "textBoxDate";
+            this.textBoxDate.Size = new System.Drawing.Size(258, 20);
+            this.textBoxDate.TabIndex = 49;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(9, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(304, 180);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -180,13 +184,13 @@
             this.Controls.Add(this.comboBoxAccept);
             this.Controls.Add(this.labelNumber);
             this.Controls.Add(this.labelDate);
-            this.Controls.Add(this.textBoxPhone);
-            this.Controls.Add(this.textBoxName);
+            this.Controls.Add(this.textBoxNumber);
+            this.Controls.Add(this.textBoxDate);
             this.Controls.Add(this.buttonDel);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.listViewTables);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormStaff";
             this.Text = "FormStaff";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -208,8 +212,8 @@
         private System.Windows.Forms.ComboBox comboBoxAccept;
         private System.Windows.Forms.Label labelNumber;
         private System.Windows.Forms.Label labelDate;
-        private System.Windows.Forms.TextBox textBoxPhone;
-        private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.TextBox textBoxNumber;
+        private System.Windows.Forms.TextBox textBoxDate;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

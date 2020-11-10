@@ -16,7 +16,7 @@ namespace Семеновых_Латыпов
     {
         public int Id { get; set; }
         public string Date { get; set; }
-        public string Table { get; set; }
+        public string Tables1 { get; set; }
         public string Type { get; set; }
     }
 }

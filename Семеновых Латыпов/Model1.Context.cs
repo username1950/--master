@@ -13,10 +13,10 @@ namespace Семеновых_Латыпов
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CafeEntities2 : DbContext
+    public partial class CafeEntities3 : DbContext
     {
-        public CafeEntities2()
-            : base("name=CafeEntities2")
+        public CafeEntities3()
+            : base("name=CafeEntities3")
         {
         }
     

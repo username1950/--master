@@ -11,7 +11,7 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Date" Type="nvarchar(max)" />
-          <Property Name="Table" Type="nvarchar(max)" />
+          <Property Name="Tables" Type="nvarchar(max)" />
           <Property Name="Type" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="Users">
@@ -38,7 +38,7 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Table" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Tables1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Users">
@@ -50,7 +50,7 @@
           <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityContainer Name="CafeEntities2" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="CafeEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Tables" EntityType="Self.Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" />
         </EntityContainer>
@@ -59,13 +59,13 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище CafeModelContainer" CdmEntityContainer="CafeEntities2">
+        <EntityContainerMapping StorageEntityContainer="Хранилище CafeModelContainer" CdmEntityContainer="CafeEntities3">
           <EntitySetMapping Name="Tables">
             <EntityTypeMapping TypeName="CafeModel.Tables">
               <MappingFragment StoreEntitySet="Tables">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
-                <ScalarProperty Name="Table" ColumnName="Table" />
+                <ScalarProperty Name="Tables1" ColumnName="Tables" />
                 <ScalarProperty Name="Type" ColumnName="Type" />
               </MappingFragment>
             </EntityTypeMapping>
